@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リベシティ オフィス</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #0f0f0f;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    gap: 16px;
+  }
+  h1 { font-size: 13px; font-weight: 700; letter-spacing: 0.2em; color: #888; text-transform: uppercase; margin-bottom: 8px; }
+  .cards { display: flex; flex-direction: column; gap: 12px; width: 100%; max-width: 360px; }
+  .card { display: block; text-decoration: none; background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 16px; padding: 20px 24px; transition: all 0.2s ease; position: relative; overflow: hidden; }
+  .card::before { content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity 0.2s; border-radius: 16px; }
+  .card-umeda::before { background: radial-gradient(circle at 0% 50%, #ff6b3520 0%, transparent 70%); }
+  .card-yotsubashi::before { background: radial-gradient(circle at 0% 50%, #3b82f620 0%, transparent 70%); }
+  .card-kobe::before { background: radial-gradient(circle at 0% 50%, #a855f720 0%, transparent 70%); }
+  .card:hover { border-color: #444; transform: translateY(-2px); }
+  .card:hover::before { opacity: 1; }
+  .card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+  .city { font-size: 22px; font-weight: 900; letter-spacing: -0.02em; color: #fff; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .card-umeda .dot { background: #ff6b35; }
+  .card-yotsubashi .dot { background: #3b82f6; }
+  .card-kobe .dot { background: #a855f7; }
+  .sub { font-size: 11px; color: #555; letter-spacing: 0.1em; }
+  .arrow { position: absolute; right: 24px; top: 50%; transform: translateY(-50%); font-size: 18px; color: #333; transition: all 0.2s; }
+  .card:hover .arrow { color: #666; transform: translateY(-50%) translateX(3px); }
+  .footer { font-size: 11px; color: #333; margin-top: 8px; letter-spacing: 0.05em; }
+</style>
+</head>
+<body>
+<h1>リベシティ オフィス</h1>
+<div class="cards">
+  <a href="https://office.libecity.com/places/umeda" target="_blank" class="card card-umeda">
+    <div class="card-top"><span class="city">梅田</span><span class="dot"></span></div>
+    <div class="sub">OSAKA · UMEDA</div>
+    <span class="arrow">→</span>
+  </a>
+  <a href="https://office.libecity.com/places/yotsubashi" target="_blank" class="card card-yotsubashi">
+    <div class="card-top"><span class="city">四ツ橋</span><span class="dot"></span></div>
+    <div class="sub">OSAKA · YOTSUBASHI</div>
+    <span class="arrow">→</span>
+  </a>
+  <a href="https://office.libecity.com/places/kobe" target="_blank" class="card card-kobe">
+    <div class="card-top"><span class="city">神戸</span><span class="dot"></span></div>
+    <div class="sub">HYOGO · KOBE</div>
+    <span class="arrow">→</span>
+  </a>
+</div>
+<div class="footer">タップで直接オフィスページへ</div>
+</body>
+</html>
